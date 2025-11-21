@@ -1,0 +1,68 @@
+{
+  "name": "iley - AI Image Generator & Editor",
+  "short_name": "iley",
+  "description": "Generate stunning images from text or transform existing photos with AI. Create, edit, and enhance images instantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "graphics", "multimedia"],
+  "icons": [
+    {
+      "src": "/icon-light-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-202025-11-21-20at-2014.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "iley AI Image Editor Interface"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Generate Image",
+      "short_name": "Generate",
+      "description": "Create AI-generated images from text",
+      "url": "/?action=generate",
+      "icons": [
+        {
+          "src": "/icon-light-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Upload Image",
+      "short_name": "Upload",
+      "description": "Edit and enhance existing images",
+      "url": "/?action=upload",
+      "icons": [
+        {
+          "src": "/icon-light-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ]
+}
