@@ -37,10 +37,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="https://app.iley.app/auth" className="text-sm font-medium text-zinc-300 hover:text-white hidden sm:block">
+          <a href="https://workspace.iley.app/auth" className="text-sm font-medium text-zinc-300 hover:text-white hidden sm:block">
             Sign in
           </a>
-          <a href="https://app.iley.app/auth">
+          <a href="https://workspace.iley.app/auth">
             <Button className="bg-[#a3e635] text-black hover:bg-[#8cd32a] font-semibold rounded-full px-6">
               Get iley
             </Button>

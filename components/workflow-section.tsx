@@ -27,9 +27,9 @@ export function WorkflowSection() {
               iley plans, explores, and creates like a real designer — calling the right tools, mapping out directions,
               and bringing your creative vision to life.
             </p>
-            <span className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded">
+            <a href="https://workspace.iley.app/auth" className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded hover:bg-[#8cd32a] transition-colors">
               Try Now
-            </span>
+            </a>
           </div>
         </div>
 
@@ -43,9 +43,9 @@ export function WorkflowSection() {
               On ChatCanvas, your ideas speak — and design sees, understands and responds. Mark what matters, leave a
               note, sketch a frame. iley reads your intent.
             </p>
-            <span className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded">
+            <a href="https://workspace.iley.app/auth" className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded hover:bg-[#8cd32a] transition-colors">
               Try Now
-            </span>
+            </a>
           </div>
           <div className="flex-1">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
@@ -72,9 +72,9 @@ export function WorkflowSection() {
               You imagine it — iley brings it to life. Every format you need, ready in
               an instant.
             </p>
-            <span className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded">
+            <a href="https://workspace.iley.app/auth" className="inline-block px-3 py-1 bg-[#a3e635] text-black text-xs font-bold uppercase tracking-wider rounded hover:bg-[#8cd32a] transition-colors">
               Try Now
-            </span>
+            </a>
           </div>
         </div>
       </div>

@@ -92,7 +92,7 @@ export default function PricingSection() {
 
   const handlePlanSelection = (planName: string) => {
     // Redirect to auth page with plan selection
-    window.location.href = `https://app.iley.app/auth?redirect=/home?plan=${planName.toLowerCase()}`
+    window.location.href = `https://workspace.iley.app/auth?redirect=/home?plan=${planName.toLowerCase()}`
   }
 
   const proceedToPayment = (planName: string) => {

@@ -270,12 +270,14 @@ export function FeatureGrid() {
                   <h3 className="text-xl font-medium text-white leading-tight max-w-[80%]">{feature.title}</h3>
 
                   <div className="opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                    <Button
-                      size="sm"
-                      className="rounded-full bg-[#a3e635] text-black hover:bg-[#8cd32a] font-medium"
-                    >
-                      Try Now <ArrowRight className="ml-2 w-3 h-3" />
-                    </Button>
+                    <a href="https://workspace.iley.app/auth">
+                      <Button
+                        size="sm"
+                        className="rounded-full bg-[#a3e635] text-black hover:bg-[#8cd32a] font-medium"
+                      >
+                        Try Now <ArrowRight className="ml-2 w-3 h-3" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -35,7 +35,7 @@ export default function CTASection({ onGetStarted, showWatchDemo = false }: CTAS
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://app.iley.app/auth"
+              href="https://workspace.iley.app/auth"
               className="bg-[#a3e635] text-black px-8 py-4 rounded-full font-semibold hover:bg-[#8cd32a] transition-all hover:scale-105 flex items-center gap-3 text-lg"
             >
               <GoogleIcon className="w-5 h-5" />

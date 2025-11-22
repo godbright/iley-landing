@@ -107,7 +107,7 @@ export default function UseCaseLandingComponent({ useCase }: UseCaseLandingProps
   const industryApplications = generateIndustryApplications(useCase)
 
   const handleGetStarted = () => {
-    // Handle getting started action
+    window.location.href = 'https://workspace.iley.app/auth'
   }
 
   const handleTransform = () => {
