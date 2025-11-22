@@ -1,5 +1,4 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -130,12 +129,29 @@
     @apply bg-background text-foreground;
     /* Prevent horizontal scrolling */
     overflow-x: hidden;
-    /* Add padding to account for fixed header */
+    /* Add padding to account for fixed header - responsive */
     padding-top: 64px;
     /* Optimize for smooth animations */
     transform-style: preserve-3d;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 56px; /* Smaller header on mobile */
+    }
+    
+    /* Reduce section spacing on mobile */
+    .mobile-section-spacing {
+      @apply py-8;
+    }
+    
+    /* Custom utility for mobile spacing reduction */
+    .reduce-mobile-spacing {
+      @apply space-y-8;
+    }
   }
   
   /* Optimize elements for smooth scrolling */

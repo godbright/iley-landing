@@ -3,9 +3,9 @@ import { Twitter, Instagram, Youtube, Facebook } from "lucide-react"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-black text-white pt-24 pb-12">
+    <footer className="bg-black text-white pt-12 md:pt-24 pb-8 md:pb-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 mb-12 md:mb-24">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="text-3xl font-serif font-bold mb-6 block text-white">
               iley
@@ -30,7 +30,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Product</h4>
+            <h4 className="font-bold mb-4 md:mb-6">Product</h4>
             <ul className="space-y-4 text-zinc-600 text-sm">
               <li>
                 <Link href="/features" className="hover:text-white">
@@ -56,7 +56,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Resources</h4>
+            <h4 className="font-bold mb-4 md:mb-6">Resources</h4>
             <ul className="space-y-4 text-zinc-600 text-sm">
               <li>
                 <Link href="#" className="hover:text-white">
@@ -82,7 +82,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Company</h4>
+            <h4 className="font-bold mb-4 md:mb-6">Company</h4>
             <ul className="space-y-4 text-zinc-600 text-sm">
               <li>
                 <Link href="#" className="hover:text-white">

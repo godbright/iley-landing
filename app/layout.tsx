@@ -22,11 +22,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "iley - AI Image Generator & Editor",
-    template: "%s | iley - AI Image Generator & Editor"
+    default: "iley - Creative AI Workspace | AI Image Generator & Editor",
+    template: "%s | iley - Creative AI Workspace"
   },
-  description: "Generate stunning images from text or transform existing photos with AI. Create, edit, and enhance images instantly - remove backgrounds, change styles, upscale quality, and more. Powered by advanced AI models including Flux, DALL-E, and Stable Diffusion.",
+  description: "Your complete creative AI workspace. Generate stunning images from text, transform existing photos, and unleash your creativity with powerful AI tools. Create, edit, and enhance images instantly - remove backgrounds, change styles, upscale quality, and more. Powered by advanced AI models including Flux, DALL-E, and Stable Diffusion.",
   keywords: [
+    "creative ai workspace",
+    "ai workspace platform",
+    "creative ai tools",
     "ai image generator",
     "ai image editor",
     "text to image",
@@ -49,7 +52,12 @@ export const metadata: Metadata = {
     "image colorization",
     "photo retouching",
     "creative image editing",
-    "prompt to image"
+    "prompt to image",
+    "creative workspace",
+    "ai creative suite",
+    "digital creative workspace",
+    "ai-powered creativity",
+    "creative collaboration platform"
   ],
   authors: [{ name: "iley Team" }],
   creator: "iley",
@@ -69,9 +77,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://iley.app",
-    siteName: "iley - AI Image Generator & Editor",
-    title: "iley - AI Image Generator & Editor | Create & Transform Photos",
-    description: "Generate stunning images from text or transform existing photos with AI. Create, edit, and enhance images instantly - remove backgrounds, change styles, upscale quality, and more with advanced AI models.",
+    siteName: "iley - Creative AI Workspace",
+    title: "iley - Creative AI Workspace | Generate, Edit & Transform Images with AI",
+    description: "Your complete creative AI workspace. Generate stunning images from text, transform existing photos, and unleash your creativity with powerful AI tools. Create, edit, and enhance images instantly with advanced AI models.",
     images: [
       {
         url: "/placeholder.jpg",
@@ -86,31 +94,37 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@ileyapp",
     creator: "@ileyapp",
-    title: "iley - AI Image Generator & Editor",
-    description: "Generate stunning images from text or transform existing photos with AI. Create, edit, and enhance images instantly - remove backgrounds, change styles, upscale quality, and more.",
+    title: "iley - Creative AI Workspace",
+    description: "Your complete creative AI workspace. Generate stunning images from text, transform existing photos, and unleash your creativity with powerful AI tools. Create, edit, and enhance images instantly.",
     images: ["/placeholder.jpg"],
   },
   alternates: {
     canonical: "https://iley.app",
   },
   category: "Technology",
-  classification: "AI Image Editing Software",
+  classification: "Creative AI Workspace Platform",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
+        url: "/favicon/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
       },
       {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
+        url: "/favicon/favicon-16x16.png", 
+        sizes: "16x16",
+        type: "image/png",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/favicon.ico",
+        type: "image/x-icon",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/favicon/apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/favicon/apple-touch-icon.png",
+    },
   },
   other: {
     "application-name": "iley",
@@ -138,8 +152,8 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://iley.app/#website",
         "url": "https://iley.app/",
-        "name": "iley - AI Image Generator & Editor",
-        "description": "Generate stunning images from text or transform existing photos with AI. Create, edit, and enhance images instantly - remove backgrounds, change styles, upscale quality, and more.",
+        "name": "iley - Creative AI Workspace",
+        "description": "Your complete creative AI workspace. Generate stunning images from text, transform existing photos, and unleash your creativity with powerful AI tools. Create, edit, and enhance images instantly.",
         "potentialAction": [
           {
             "@type": "SearchAction",
@@ -155,10 +169,10 @@ export default function RootLayout({
       {
         "@type": ["SoftwareApplication", "Product"],
         "@id": "https://iley.app/#product",
-        "name": "iley - AI Image Generator & Editor",
+        "name": "iley - Creative AI Workspace",
         "url": "https://iley.app",
-        "description": "AI-powered image generator and editor. Create images from text prompts or transform existing photos. Features include text-to-image generation, background removal, style transfer, upscaling, and more.",
-        "applicationCategory": "MultimediaApplication",
+        "description": "Complete creative AI workspace for artists, designers, and creators. Generate images from text prompts, transform existing photos, and access powerful AI tools. Features include text-to-image generation, background removal, style transfer, upscaling, and more.",
+        "applicationCategory": ["MultimediaApplication", "CreativeWork", "WebApplication"],
         "operatingSystem": ["Web Browser", "Windows", "macOS", "Linux", "iOS", "Android"],
         "softwareVersion": "2.0",
         "releaseDate": "2024-01-01",
@@ -171,7 +185,7 @@ export default function RootLayout({
           "name": "iley",
           "@id": "https://iley.app/#organization"
         },
-        "category": "AI Image Generation Software",
+        "category": "Creative AI Workspace Platform",
         "image": [
           "https://iley.app/placeholder.jpg",
           "https://iley.app/land_images/opt_anime.webp",
@@ -274,6 +288,7 @@ export default function RootLayout({
           }
         ],
         "featureList": [
+          "Complete Creative AI Workspace Environment",
           "Text-to-Image Generation with FLUX, DALL-E, Stable Diffusion",
           "AI Image Creation from Natural Language Prompts",
           "Automatic Background Removal with AI",
@@ -285,8 +300,11 @@ export default function RootLayout({
           "Creative AI Filters and Effects",
           "Prompt-based Image Generation",
           "Batch Image Processing",
+          "Workspace Project Management",
+          "Creative Asset Organization",
           "High-Resolution Export (up to 4K)",
-          "API Access for Developers"
+          "API Access for Developers",
+          "Collaborative Creative Tools"
         ],
         "screenshot": [
           "https://iley.app/land_images/opt_anime.webp",
@@ -331,7 +349,7 @@ export default function RootLayout({
         <link rel="preload" href="/land_images/opt_anime.webp" as="image" type="image/webp" />
         <link rel="preload" href="/land_images/opt_paint03.webp" as="image" type="image/webp" />
         
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
         
         <script

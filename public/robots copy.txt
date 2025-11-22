@@ -1,0 +1,53 @@
+# Robots.txt for iley - AI Image Editor
+# https://www.iley.app
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /user/
+Disallow: /edit?*
+Disallow: /home?*
+
+# Allow crawling of static assets
+Allow: /images/
+Allow: /icons/
+Allow: /examples/
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /sitemap.xml
+
+# Special rules for major search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /user/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /user/
+
+# Block AI training crawlers from user content
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Crawl delay for other bots
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.iley.app/sitemap.xml

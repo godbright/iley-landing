@@ -13,8 +13,8 @@ import SocialProof from "@/components/social-proof"
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 pb-20 px-4 sm:pt-20 sm:pb-32">
-      {/* Scattered Background Images */}
-      <div className="absolute inset-0 pointer-events-none select-none opacity-60 sm:opacity-80">
+      {/* Scattered Background Images - Hidden on mobile */}
+      <div className="absolute inset-0 pointer-events-none select-none opacity-0 sm:opacity-60 md:opacity-80 hidden sm:block">
         {/* Top Left */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,11 +88,11 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-bold tracking-tight leading-[0.9] mb-6 sm:mb-8 text-white"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-bold tracking-tight leading-[0.9] mb-6 sm:mb-8 text-white"
         >
           Creative 
           <br />
-          <span className="text-zinc-400 text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-normal italic">
+          <span className="text-zinc-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal italic">
             (Ai Workspace)
           </span>
         </motion.h1>
@@ -103,7 +103,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col items-center gap-6 sm:gap-8 mt-8 sm:mt-12"
         >
-          <p className="text-base sm:text-lg text-zinc-400 max-w-xs sm:max-w-xl mx-auto leading-relaxed px-2 sm:px-0">
+          <p className="text-lg sm:text-xl text-zinc-400 max-w-sm sm:max-w-xl mx-auto leading-relaxed px-2 sm:px-0">
        Build everything, from logo design to full branding, social content, print materials, mockups, and video creation, powered by AI.
           </p>
 

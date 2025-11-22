@@ -38,38 +38,38 @@ export default function Home() {
           <FeatureGrid />
         </SmoothScrollSection>
         
-        {/* Workflow section with slide up */}
-        <SmoothScrollSection delay={0.2}>
+        {/* Workflow section with slide up - reduced mobile spacing */}
+        <SmoothScrollSection delay={0.2} className="-mt-8 md:mt-0">
           <WorkflowSection />
         </SmoothScrollSection>
         
-        {/* Interface demo with fade in */}
-        <FadeInSection delay={0.1}>
+        {/* Interface demo with fade in - reduced mobile spacing */}
+        <FadeInSection delay={0.1} className="-mt-8 md:mt-0">
           <InterfaceDemo />
         </FadeInSection>
         
-        {/* Pricing section with slide up */}
-        <SlideUpSection delay={0.1}>
+        {/* Pricing section with slide up - reduced mobile spacing */}
+        <SlideUpSection delay={0.1} className="-mt-8 md:mt-0">
           <PricingSection />
         </SlideUpSection>
         
-        {/* Community gallery with slide up */}
-        <SmoothScrollSection delay={0.2}>
+        {/* Community gallery with slide up - reduced mobile spacing */}
+        <SmoothScrollSection delay={0.2} className="-mt-8 md:mt-0">
           <CommunityGallery />
         </SmoothScrollSection>
         
-        {/* FAQ with fade in */}
-        <FadeInSection delay={0.1}>
+        {/* FAQ with fade in - reduced mobile spacing */}
+        <FadeInSection delay={0.1} className="-mt-8 md:mt-0">
           <FAQ />
         </FadeInSection>
         
-        {/* CTA section with slide up */}
-        <SlideUpSection delay={0.1}>
+        {/* CTA section with slide up - reduced mobile spacing */}
+        <SlideUpSection delay={0.1} className="-mt-8 md:mt-0">
           <CTASection onGetStarted={() => setShowAuthModal(true)} showWatchDemo={false} />
         </SlideUpSection>
         
-        {/* Footer with fade in */}
-        <FadeInSection>
+        {/* Footer with fade in - reduced mobile spacing */}
+        <FadeInSection className="-mt-8 md:mt-0">
           <SiteFooter />
         </FadeInSection>
       </main>

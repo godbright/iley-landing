@@ -14,12 +14,12 @@ export default function FAQPage() {
       <SiteHeader />
       
       {/* Hero Section for FAQ */}
-      <section className="pt-32 pb-16 bg-black">
+      <section className="pt-16 sm:pt-20 pb-16 bg-black">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto px-4">
             Everything you need to know about iley. Can't find the answer you're looking for? 
             <a href="#" className="text-[#a3e635] hover:underline ml-1">Get in touch</a>.
           </p>

@@ -35,20 +35,20 @@ export function InterfaceDemo() {
   }, [])
 
   return (
-    <section className="py-32 bg-black relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white">
+        <h2 className="text-3xl md:text-6xl font-serif font-bold mb-6 text-white">
           An app that understands you,
           <br />
           not the other way around
         </h2>
-        <p className="text-zinc-400 max-w-2xl mx-auto mb-12 text-lg">
+        <p className="text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-12 text-base md:text-lg">
           iley comes with built-in canvas design tools giving you access to a design intensive screen. For simplicity you can use the grid design tool.
         </p>
 
       
 
-        <div className="relative mx-auto max-w-7xl rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 p-8">
+        <div className="relative mx-auto max-w-7xl rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 p-4 md:p-8">
           <div className="relative bg-zinc-900">
             <AnimatePresence mode="wait">
               <motion.div

@@ -78,8 +78,8 @@ interface SocialProofProps {
 
 export default function SocialProof({ showAvatars = false, className = "" }: SocialProofProps) {
   // Dummy static values instead of dynamic counting
-  const usersCount = 15000
-  const visualsCount = 50000
+  const usersCount = 100
+  const visualsCount = 100
   
   const [recentUsers, setRecentUsers] = useState<Array<{ 
     initials: string; 
@@ -232,7 +232,7 @@ export default function SocialProof({ showAvatars = false, className = "" }: Soc
       
       {/* Simple stats text with dummy numbers */}
       <div className="text-base sm:text-lg lg:text-xl text-zinc-400 text-center order-1 sm:order-2 px-2">
-        Trusted by <span className="font-semibold text-[#a3e635]">{usersCount.toLocaleString()}</span> happy customers
+        Trusted by <span className="font-semibold text-[#a3e635]">{usersCount.toLocaleString()}</span> + happy customers
       </div>
       
       {/* Commented out detailed stats */}

@@ -8,15 +8,15 @@ interface CTASectionProps {
 
 export default function CTASection({ onGetStarted, showWatchDemo = false }: CTASectionProps) {
   return (
-    <section className="bg-zinc-950 py-24">
+    <section className="bg-zinc-950 py-12 md:py-24">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Main CTA */}
-        <div className="mb-16">
+        <div className="mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 bg-[#a3e635]/10 border border-[#a3e635]/20 rounded-full px-4 py-2 mb-6">
             <span className="text-[#a3e635] text-xs font-medium uppercase tracking-wider">Start Creating Today</span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Your next creative vision is
             <br />
             <span className="relative inline-block">
@@ -29,7 +29,7 @@ export default function CTASection({ onGetStarted, showWatchDemo = false }: CTAS
             </span>
           </h2>
           
-          <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-zinc-400 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
             Join thousands of creators who've discovered the future of design. No credit card required to start.
           </p>
           
@@ -60,7 +60,7 @@ export default function CTASection({ onGetStarted, showWatchDemo = false }: CTAS
         </div>
 
         {/* Quick Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <div className="flex items-center gap-3 justify-center text-zinc-400">
             <div className="w-2 h-2 bg-[#a3e635] rounded-full"></div>
             <span className="text-base">No setup required</span>

@@ -97,18 +97,18 @@ export function CommunityGallery() {
   }
 
   return (
-    <section className="py-32 bg-[#f0f0f0] text-black">
+    <section className="py-16 md:py-32 bg-[#f0f0f0] text-black">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-16">
           {/* Left Content */}
-          <div className="lg:w-1/3 flex flex-col justify-center sticky top-32 h-fit">
-            <h2 className="text-5xl md:text-6xl font-serif font-bold mb-12">Made in iley</h2>
+          <div className="lg:w-1/3 flex flex-col justify-center lg:sticky lg:top-32 h-fit">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 md:mb-12">Made in iley</h2>
 
-            <blockquote className="text-2xl md:text-3xl font-serif leading-tight mb-8">
+            <blockquote className="text-xl md:text-3xl font-serif leading-tight mb-6 md:mb-8">
               "{currentTestimonial.text}"
             </blockquote>
 
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               <p className="font-bold">{currentTestimonial.author.name}</p>
               <p className="text-zinc-500">@{currentTestimonial.author.username}</p>
             </div>
@@ -131,7 +131,7 @@ export function CommunityGallery() {
 
           {/* Right Grid */}
           <div className="lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-6">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
                   <Image src="/colorful-illustration-portrait-1.jpg" alt="Artwork" fill className="object-cover" />
