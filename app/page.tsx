@@ -15,11 +15,16 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 import HowToSchema from "@/components/HowToSchema"
 import { imageGenerationHowTo } from "@/lib/howToSchemas"
 import { useState, useEffect } from "react"
+import { usePostHogTracking } from "@/hooks/usePostHogTracking"
 
 
 export default function Home() {
-  
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false)
+  const { trackLandingPageView, trackCTAClick } = usePostHogTracking()
+
+  useEffect(() => {
+    trackLandingPageView('home')
+  }, [trackLandingPageView])
 
   return (
     <SmoothScrollProvider>
@@ -65,7 +70,10 @@ export default function Home() {
         
         {/* CTA section with slide up - reduced mobile spacing */}
         <SlideUpSection delay={0.1} className="-mt-8 md:mt-0">
-          <CTASection onGetStarted={() => setShowAuthModal(true)} showWatchDemo={false} />
+          <CTASection onGetStarted={() => {
+            trackCTAClick('hero', 'main_page_bottom')
+            setShowAuthModal(true)
+          }} showWatchDemo={false} />
         </SlideUpSection>
         
         {/* Footer with fade in - reduced mobile spacing */}

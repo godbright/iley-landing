@@ -2,14 +2,15 @@
 import { Check } from 'lucide-react'
 import { useState } from 'react'
 import GoogleIcon from "@/components/ui/google-icon"
+import { usePostHogTracking } from "@/hooks/usePostHogTracking"
 
 
 export default function PricingSection() {
- 
   const [isYearly, setIsYearly] = useState(true)
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
   const [pendingPlan, setPendingPlan] = useState<string | null>(null)
+  const { trackPricingInteraction } = usePostHogTracking()
   
   // Calculate monthly price from yearly with savings
   const calculateMonthlyFromYearly = (yearlyPrice: number) => {
@@ -91,6 +92,7 @@ export default function PricingSection() {
   ]
 
   const handlePlanSelection = (planName: string) => {
+    trackPricingInteraction('select_plan', planName.toLowerCase())
     // Redirect to auth page with plan selection
     window.location.href = `https://workspace.iley.app/auth?redirect=/home?plan=${planName.toLowerCase()}`
   }
@@ -169,7 +171,10 @@ export default function PricingSection() {
           <div className="mt-8 flex items-center justify-center">
             <div className="bg-zinc-800 rounded-full p-1 flex items-center">
               <button
-                onClick={() => setIsYearly(false)}
+                onClick={() => {
+                  trackPricingInteraction('toggle_billing', 'monthly')
+                  setIsYearly(false)
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   !isYearly
                     ? 'bg-white text-black shadow-sm'
@@ -179,7 +184,10 @@ export default function PricingSection() {
                 Monthly
               </button>
               <button
-                onClick={() => setIsYearly(true)}
+                onClick={() => {
+                  trackPricingInteraction('toggle_billing', 'yearly')
+                  setIsYearly(true)
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all relative ${
                   isYearly
                     ? 'bg-white text-black shadow-sm'

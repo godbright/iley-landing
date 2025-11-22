@@ -9,8 +9,11 @@ import { ArrowRight } from 'lucide-react'
 import React from "react"
 import { PromptInput } from "@/components/prompt-input"
 import SocialProof from "@/components/social-proof"
+import { usePostHogTracking } from "@/hooks/usePostHogTracking"
 
 export function HeroSection() {
+  const { trackCTAClick, trackLandingPageClick } = usePostHogTracking()
+  
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 pb-20 px-4 sm:pt-20 sm:pb-32">
       {/* Scattered Background Images - Hidden on mobile */}
@@ -109,14 +112,21 @@ export function HeroSection() {
 
           <div className="w-full max-w-2xl px-4 sm:px-0">
             <PromptInput 
-              onTransform={() => alert('Transform clicked!')}
-              onUploadClick={() => alert('Upload clicked!')}
+              onTransform={() => {
+                trackCTAClick('hero', 'transform_button')
+                window.open('https://workspace.iley.app/auth', '_blank')
+              }}
+              onUploadClick={() => {
+                trackCTAClick('hero', 'upload_button')
+                window.open('https://workspace.iley.app/auth', '_blank')
+              }}
             />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md sm:max-w-none">
             <a 
               href="https://workspace.iley.app/auth"
+              onClick={() => trackCTAClick('hero', 'main_cta_button')}
               className="bg-[#a3e635] text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-[#8cd32a] transition-all hover:scale-105 flex items-center gap-3 text-base sm:text-lg w-full sm:w-auto justify-center"
             >
               <GoogleIcon className="w-5 h-5 shrink-0" />

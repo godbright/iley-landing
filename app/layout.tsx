@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Urbanist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { CSPostHogProvider } from "../src/providers/posthog-provider"
 import "./globals.css"
 
 const urbanist = Urbanist({
@@ -362,7 +363,9 @@ export default function RootLayout({
       <body
         className={`${urbanist.variable} ${geistMono.variable} font-sans antialiased min-h-full bg-gradient-to-b from-gray-50 to-white selection:bg-blue-500/10 selection:text-blue-600`}
       >
-        {children}
+        <CSPostHogProvider>
+          {children}
+        </CSPostHogProvider>
         <Analytics />
       </body>
     </html>
