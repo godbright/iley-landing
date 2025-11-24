@@ -32,7 +32,7 @@ export function FadeInSection({ children, className = "", delay = 0 }: SmoothScr
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-100px", amount: 0.3 }}
+      viewport={{ once: true, margin: "-50px", amount: 0.1 }}
       transition={{
         duration: 0.6,
         delay: delay,

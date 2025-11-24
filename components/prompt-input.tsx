@@ -38,7 +38,7 @@ export function PromptInput({ onTransform, onUploadClick }: PromptInputProps) {
             value={promptText}
             onChange={(e) => setPromptText(e.target.value)}
             placeholder="Describe your creative vision... Try: &ldquo;create anime style portrait&rdquo; or &ldquo;vintage film photography effect&rdquo;"
-            className="w-full p-4 sm:p-6 md:p-8 text-base sm:text-lg md:text-xl placeholder-zinc-500 resize-none focus:outline-none bg-transparent leading-relaxed text-white font-light"
+            className="w-full p-4 sm:p-6 md:p-8 pr-16 sm:pr-20 md:pr-24 text-base sm:text-lg md:text-xl placeholder-zinc-500 resize-none focus:outline-none bg-transparent leading-relaxed text-white font-light"
             style={{ 
               height: '110px',
               minHeight: '100px'
