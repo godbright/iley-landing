@@ -20,7 +20,7 @@ export default function PricingSection() {
   const plans = [
     {
       name: "Basic",
-      price: "$2",
+      price: "$5",
       period: "per month",
       credits: "40 credits",
       description: "for casual users",
@@ -35,8 +35,8 @@ export default function PricingSection() {
       ],
       cta: "Start Basic",
       popular: false,
-      yearlyPrice: 20,
-      yearlyPricePerMonth: calculateMonthlyFromYearly(20),
+      yearlyPrice: 50,
+      yearlyPricePerMonth: calculateMonthlyFromYearly(50),
       yearlyCredits: "480 credits",
       savings: "Save ~17%"
     },
